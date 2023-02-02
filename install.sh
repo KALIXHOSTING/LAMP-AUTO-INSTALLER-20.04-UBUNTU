@@ -152,6 +152,22 @@ sudo systemctl restart apache2
 
 echo 'done'
 
+echo 'PHPMYADMIN SET UP'
+
+sudo apt-get install phpmyadmin -y
+
+
+echo 'done'
+
+echo 'FFMPEG SET UP'
+
+sudo apt-get install ffmpeg -y
+
+
+echo 'done'
+
+
+
 
 
 
