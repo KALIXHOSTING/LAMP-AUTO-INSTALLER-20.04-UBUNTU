@@ -179,7 +179,83 @@ sudo apt-get install ffmpeg -y
 
 echo 'done'
 
+echo 'PHP 7.4 BCMATH SET UP'
 
+sudo apt-get install php7.4-bcmath -y
+
+
+echo 'done'
+
+echo 'rar SET UP'
+
+sudo apt-get install rar -y
+
+
+echo 'done'
+
+echo 'unrar SET UP'
+
+sudo apt-get install unrar -y
+
+
+echo 'done'
+
+echo 'curl SET UP'
+
+sudo apt-get install curl -y
+
+
+echo 'done'
+
+
+
+
+
+echo 'PHPINFO'
+
+echo "<?php phpinfo(); ?>" | sudo tee /var/www/html/info.php
+
+echo 'done'
+
+echo 'COMPOSER SET UP'
+
+sudo apt install php-cli unzip -y
+
+
+echo 'done'
+
+
+echo 'COMPOSER SET UP'
+
+curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
+
+
+echo 'done'
+
+echo 'COMPOSER SET UP'
+
+HASH=`curl -sS https://composer.github.io/installer.sig`
+
+
+echo 'done'
+
+echo 'COMPOSER SET UP'
+
+php -r "if (hash_file('SHA384', '/tmp/composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+
+
+echo 'done'
+echo 'COMPOSER SET UP'
+
+sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
+echo 'done'
+
+echo 'COMPOSER VERIFY SET UP'
+
+composer
+
+echo 'done'
 
 
 
