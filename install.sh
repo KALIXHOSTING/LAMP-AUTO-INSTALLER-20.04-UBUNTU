@@ -1,5 +1,18 @@
 #! /bin/bash
 
+echo 'UPDATE'
+
+sudo apt-get update -y
+
+echo 'done'
+
+echo 'UPGRADE'
+
+sudo apt-get upgrade -y
+
+echo 'done'
+
+
 echo 'INSTALL APACHE 2'
 
 sudo apt install -y apache2 apache2-utils
